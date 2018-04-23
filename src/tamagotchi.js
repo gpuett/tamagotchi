@@ -26,6 +26,14 @@ class Tamagotchi {
     }
   }
 
+  needsANap() {
+    if (this.restLevel > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   feed() {
     this.foodLevel = 10;
   }
@@ -36,7 +44,28 @@ class Tamagotchi {
     } , 5000);
   }
 
+  nap() {
+    this.restLevel = 10;
+  }
 
+  setPlay() {
+    setInterval(() => {
+      this.playLevel--;
+    } , 2000);
+  }
+
+  play() {
+    this.playLevel = 10;
+  }
+
+  needsToPlay(){
+    if (this.playLevel > 0){
+      return false;
+    } else {
+      alert(`${this.name} needs to play!`)
+      return true;
+    }
+  }
 }
 
 export { Tamagotchi };

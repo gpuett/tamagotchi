@@ -1,3 +1,9 @@
 body {
   background-color: #7FDBFF;
 }
+.btn {
+  margin: 10px;
+}
+.buttons {
+  margin-top: 23px;
+}
