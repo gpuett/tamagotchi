@@ -34,7 +34,15 @@ class Tamagotchi {
     }
   }
 
-  feed() {
+  feedPizza() {
+    this.foodLevel += 19;
+  }
+
+  feedCarrot() {
+    this.foodLevel += 5;
+  }
+
+  feedApple() {
     this.foodLevel += 11;
   }
 
@@ -62,7 +70,7 @@ class Tamagotchi {
     if (this.playLevel > 0){
       return false;
     } else {
-      alert(`${this.name} needs to play!`)
+      alert(`${this.name} needs to play!`);
       return true;
     }
   }
