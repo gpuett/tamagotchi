@@ -1,15 +1,15 @@
 class Tamagotchi {
   constructor(name) {
     this.name = name;
-    this.foodLevel = 10;
-    this.restLevel = 10;
-    this.playLevel = 10;
+    this.foodLevel = 100;
+    this.restLevel = 100;
+    this.playLevel = 100;
   }
 
   setReset() {
-    this.foodLevel = 10;
-    this.restLevel = 10;
-    this.playLevel = 10;
+    this.foodLevel = 100;
+    this.restLevel = 100;
+    this.playLevel = 100;
   }
 
   setHunger() {
@@ -35,7 +35,7 @@ class Tamagotchi {
   }
 
   feed() {
-    this.foodLevel = 10;
+    this.foodLevel += 11;
   }
 
   setRest() {
@@ -45,7 +45,7 @@ class Tamagotchi {
   }
 
   nap() {
-    this.restLevel = 10;
+    this.restLevel += 11;
   }
 
   setPlay() {
@@ -55,7 +55,7 @@ class Tamagotchi {
   }
 
   play() {
-    this.playLevel = 10;
+    this.playLevel += 11;
   }
 
   needsToPlay(){

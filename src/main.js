@@ -9,6 +9,7 @@ import './styles.css';
 $(document).ready(function() {
   $("#tamagotchi").submit(function(event) {
     let newTama = new Tamagotchi($("#name").val());
+    $("#gif").show();
     newTama.setHunger();
     newTama.setRest();
     newTama.setPlay();
@@ -23,8 +24,18 @@ $(document).ready(function() {
     $("#play").click(function() {
       newTama.play();
     });
-    $(".foodLevel").text(newTama.foodLevel)
-    $(".restLevel").text(newTama.restLevel)
-    $(".playLevel").text(newTama.playLevel)
+    $(".foodLevel").text(newTama.foodLevel);
+    $(".restLevel").text(newTama.restLevel);
+    $(".playLevel").text(newTama.playLevel);
+    setInterval(() => {
+      $(".foodLevel").text(newTama.foodLevel);
+    }, 1000);
+    setInterval(() => {
+      $(".restLevel").text(newTama.restLevel);
+    }, 5000);
+    setInterval(() => {
+      $(".playLevel").text(newTama.playLevel);
+    }, 2000);
+
   });
 });

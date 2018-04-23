@@ -7,3 +7,7 @@ body {
 .buttons {
   margin-top: 23px;
 }
+
+#gif {
+  display: none;
+}
